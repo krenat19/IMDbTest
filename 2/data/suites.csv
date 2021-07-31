@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Jul 31 12:35:45 GMT 2021","Sat Jul 31 12:35:49 GMT 2021","4701","","MainPageTest","","MainPageTest","Search","Search()",""
