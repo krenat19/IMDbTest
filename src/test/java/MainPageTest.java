@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class MainPageTest {
 
     WebDriver driver;
+    MainPage mainpage;
 
     @BeforeEach
     public void Setup() {
@@ -22,20 +23,15 @@ public class MainPageTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
     @Test
-    public void Search() {
-        String searchTitle = "Terminator";
-        driver.get("https://www.imdb.com/");
-        driver.findElement(MainPage.SearchBox).sendKeys(searchTitle);
-        driver.findElement(MainPage.SearchButton).click();
-
-        WebElement HeaderText = driver.findElement(SearchResults.HeaderTitle);
-        Assertions.assertEquals("Results for " + "\"" + searchTitle + "\"", HeaderText.getText());
+    public void SearchWithClickTest() {
+        driver.get("https://www.rottentomatoes.com/");
+        mainpage = new MainPage(driver);
+        mainpage.SearchWithClick("Fried Green Tomatoes");
     }
 
     @AfterEach
