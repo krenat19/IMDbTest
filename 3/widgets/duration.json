@@ -1,0 +1,11 @@
+[ {
+  "uid" : "94403a7f0722e357",
+  "name" : "SearchWithClickTest()",
+  "time" : {
+    "start" : 1628002420006,
+    "stop" : 1628002434421,
+    "duration" : 14415
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
