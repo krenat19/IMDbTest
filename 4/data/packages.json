@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "MainPageTest",
+    "children" : [ {
+      "name" : "SearchWithClickTest",
+      "uid" : "c8556a20a9797bad",
+      "parentUid" : "07861cb88db0e1e176ece6b62d364207",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628431242693,
+        "stop" : 1628431243425,
+        "duration" : 732
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SignUpTest",
+      "uid" : "74bc137afbe05eff",
+      "parentUid" : "07861cb88db0e1e176ece6b62d364207",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628431243536,
+        "stop" : 1628431243772,
+        "duration" : 236
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "07861cb88db0e1e176ece6b62d364207"
+  } ],
+  "name" : "packages"
+}

@@ -1,0 +1,35 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "MainPageTest",
+    "children" : [ {
+      "name" : "SearchWithClickTest()",
+      "uid" : "c8556a20a9797bad",
+      "parentUid" : "07451e797142725ec6b74ea69b009345",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628431242693,
+        "stop" : 1628431243425,
+        "duration" : 732
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SignUpTest()",
+      "uid" : "74bc137afbe05eff",
+      "parentUid" : "07451e797142725ec6b74ea69b009345",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628431243536,
+        "stop" : 1628431243772,
+        "duration" : 236
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "07451e797142725ec6b74ea69b009345"
+  } ],
+  "name" : "suites"
+}
