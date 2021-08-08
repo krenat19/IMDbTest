@@ -1,0 +1,21 @@
+[ {
+  "uid" : "f040f76200b944d8",
+  "name" : "LoginTest()",
+  "time" : {
+    "start" : 1628448328273,
+    "stop" : 1628448330457,
+    "duration" : 2184
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "153f287ab72972c",
+  "name" : "EmptyLoginTest()",
+  "time" : {
+    "start" : 1628448325477,
+    "stop" : 1628448328196,
+    "duration" : 2719
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
