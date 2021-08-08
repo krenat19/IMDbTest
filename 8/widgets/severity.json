@@ -1,0 +1,61 @@
+[ {
+  "uid" : "2f8b9ecfb35fa937",
+  "name" : "LoginWithUnregisteredEmail()",
+  "time" : {
+    "start" : 1628451611180,
+    "stop" : 1628451612033,
+    "duration" : 853
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "58c1bef7c5ce90d8",
+  "name" : "LoginWithIncorrectPassword()",
+  "time" : {
+    "start" : 1628451612334,
+    "stop" : 1628451612511,
+    "duration" : 177
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9d81a98ca674264d",
+  "name" : "LoginWithoutPassword()",
+  "time" : {
+    "start" : 1628451612908,
+    "stop" : 1628451613081,
+    "duration" : 173
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "486c01b0f78e8a3d",
+  "name" : "LoginWithUnconfirmedEmail()",
+  "time" : {
+    "start" : 1628451612131,
+    "stop" : 1628451612323,
+    "duration" : 192
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7d1614a82425745c",
+  "name" : "LoginTest()",
+  "time" : {
+    "start" : 1628451612707,
+    "stop" : 1628451612899,
+    "duration" : 192
+  },
+  "status" : "broken",
+  "severity" : "critical"
+}, {
+  "uid" : "1172f67d9f967104",
+  "name" : "EmptyLoginTest()",
+  "time" : {
+    "start" : 1628451612524,
+    "stop" : 1628451612694,
+    "duration" : 170
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

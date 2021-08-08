@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sun Aug 08 19:40:12 GMT 2021","Sun Aug 08 19:40:13 GMT 2021","173","","LoginPageTest","","LoginPageTest","LoginWithoutPassword","LoginWithoutPassword()",""
+"broken","Sun Aug 08 19:40:12 GMT 2021","Sun Aug 08 19:40:12 GMT 2021","192","","LoginPageTest","","LoginPageTest","LoginTest","LoginTest()",""
+"broken","Sun Aug 08 19:40:12 GMT 2021","Sun Aug 08 19:40:12 GMT 2021","170","","LoginPageTest","","LoginPageTest","EmptyLoginTest","EmptyLoginTest()",""
+"broken","Sun Aug 08 19:40:12 GMT 2021","Sun Aug 08 19:40:12 GMT 2021","177","","LoginPageTest","","LoginPageTest","LoginWithIncorrectPassword","LoginWithIncorrectPassword()",""
+"broken","Sun Aug 08 19:40:12 GMT 2021","Sun Aug 08 19:40:12 GMT 2021","192","","LoginPageTest","","LoginPageTest","LoginWithUnconfirmedEmail","LoginWithUnconfirmedEmail()",""
+"broken","Sun Aug 08 19:40:11 GMT 2021","Sun Aug 08 19:40:12 GMT 2021","853","","LoginPageTest","","LoginPageTest","LoginWithUnregisteredEmail","LoginWithUnregisteredEmail()",""
