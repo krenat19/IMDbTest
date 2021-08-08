@@ -21,7 +21,7 @@ public class MainPageTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
+       // options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -34,7 +34,14 @@ public class MainPageTest {
         mainpage.SearchWithClick("Fried Green Tomatoes");
     }
 
-    @AfterEach
+    @Test
+    public void SignUpTest() {
+        driver.get("https://www.rottentomatoes.com/");
+        mainpage = new MainPage(driver);
+        mainpage.SignUp();
+    }
+
+   // @AfterEach
     public void Close() {
         driver.quit();
     }
