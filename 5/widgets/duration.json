@@ -1,0 +1,21 @@
+[ {
+  "uid" : "cf0f6d4df99a86f4",
+  "name" : "SignUpTest()",
+  "time" : {
+    "start" : 1628431346724,
+    "stop" : 1628431346966,
+    "duration" : 242
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9f1599cef75968eb",
+  "name" : "SearchWithClickTest()",
+  "time" : {
+    "start" : 1628431345886,
+    "stop" : 1628431346646,
+    "duration" : 760
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
