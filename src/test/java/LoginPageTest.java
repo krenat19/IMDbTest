@@ -25,7 +25,7 @@ public class LoginPageTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-notifications");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -102,7 +102,7 @@ public class LoginPageTest {
     }
 
 
-    //@AfterEach
+    @AfterEach
     public void Close() {
         driver.quit();
     }
