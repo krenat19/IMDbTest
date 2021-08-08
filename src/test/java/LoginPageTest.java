@@ -1,4 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,6 +32,7 @@ public class LoginPageTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void LoginTest() {
         loginpage = new LoginPage(driver);
         driver.get(URL);
@@ -38,6 +41,7 @@ public class LoginPageTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void EmptyLoginTest() {
         loginpage = new LoginPage(driver);
         driver.get(URL);
