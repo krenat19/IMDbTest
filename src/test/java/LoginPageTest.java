@@ -10,10 +10,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class MainPageTest {
+public class LoginPageTest {
 
     WebDriver driver;
-    MainPage mainpage;
+    LoginPage loginpage;
+    private final String URL = "https://igym-igym-dev.azurewebsites.net/authentication/login";
 
     @BeforeEach
     public void Setup() {
@@ -21,27 +22,32 @@ public class MainPageTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-       // options.addArguments("--headless");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
     @Test
-    public void SearchWithClickTest() {
-        driver.get("https://www.rottentomatoes.com/");
-        mainpage = new MainPage(driver);
-        mainpage.SearchWithClick("Fried Green Tomatoes");
+    public void LoginTest() {
+        loginpage = new LoginPage(driver);
+        driver.get(URL);
+        loginpage.Login("r01lfgpopg@privacy-mail.top", "123456");
+        loginpage.ClickLoginButton();
     }
 
     @Test
-    public void SignUpTest() {
-        driver.get("https://www.rottentomatoes.com/");
-        mainpage = new MainPage(driver);
-        mainpage.SignUp();
+    public void EmptyLoginTest() {
+        loginpage = new LoginPage(driver);
+        driver.get(URL);
+        loginpage.Login("", "");
+        WebElement loginButton = driver.findElement(loginpage.LOGIN_BUTTON);
+        boolean isLoginButtonActive = loginButton.isEnabled();
+        Assertions.assertFalse(isLoginButtonActive);
     }
 
-   // @AfterEach
+    @AfterEach
     public void Close() {
         driver.quit();
     }
