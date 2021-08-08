@@ -1,0 +1,21 @@
+[ {
+  "uid" : "47abe4bac2ba097b",
+  "name" : "EmptyLoginTest()",
+  "time" : {
+    "start" : 1628448691582,
+    "stop" : 1628448694202,
+    "duration" : 2620
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "3132a730ac850343",
+  "name" : "LoginTest()",
+  "time" : {
+    "start" : 1628448694265,
+    "stop" : 1628448696488,
+    "duration" : 2223
+  },
+  "status" : "passed",
+  "severity" : "critical"
+} ]
