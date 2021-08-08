@@ -1,0 +1,87 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "LoginPageTest",
+    "children" : [ {
+      "name" : "LoginWithUnregisteredEmail()",
+      "uid" : "d6bcc3febc6ee805",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451906434,
+        "stop" : 1628451910976,
+        "duration" : 4542
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginWithUnconfirmedEmail()",
+      "uid" : "8a80d10a308b841",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451911047,
+        "stop" : 1628451914736,
+        "duration" : 3689
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginWithIncorrectPassword()",
+      "uid" : "71b5efb989ad22c3",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451914740,
+        "stop" : 1628451918181,
+        "duration" : 3441
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "EmptyLoginTest()",
+      "uid" : "28389d0628991faa",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451918188,
+        "stop" : 1628451921399,
+        "duration" : 3211
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginTest()",
+      "uid" : "b4dc0625199902a",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451921402,
+        "stop" : 1628451924722,
+        "duration" : 3320
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginWithoutPassword()",
+      "uid" : "68e6ed37ed455eed",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628451924725,
+        "stop" : 1628451927642,
+        "duration" : 2917
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4c02d1c299d33785fe93a09989ce5979"
+  } ],
+  "name" : "suites"
+}
