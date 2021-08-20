@@ -1,0 +1,120 @@
+{
+  "uid" : "d3036478c5c14853",
+  "name" : "LoginWithUnregisteredEmail()",
+  "fullName" : "LoginPageTest.LoginWithUnregisteredEmail",
+  "historyId" : "95362fe5978c16fbbde424f1b2e046ca",
+  "time" : {
+    "start" : 1629481463391,
+    "stop" : 1629481469427,
+    "duration" : 6036
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setup",
+    "time" : {
+      "start" : 1629481463422,
+      "stop" : 1629481465348,
+      "duration" : 1926
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "Close",
+    "time" : {
+      "start" : 1629481469350,
+      "stop" : 1629481469419,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az272-514"
+  }, {
+    "name" : "thread",
+    "value" : "4515@fv-az272-514.ForkJoinPool-1-worker-3(16)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "LoginPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "LoginPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "LoginWithUnregisteredEmail"
+  }, {
+    "name" : "suite",
+    "value" : "LoginPageTest"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "d6bcc3febc6ee805",
+        "reportUrl" : "https://krenat19.github.io/igym_test/9//#testresult/d6bcc3febc6ee805",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628451906434,
+          "stop" : 1628451910976,
+          "duration" : 4542
+        }
+      }, {
+        "uid" : "2f8b9ecfb35fa937",
+        "reportUrl" : "https://krenat19.github.io/igym_test/8//#testresult/2f8b9ecfb35fa937",
+        "status" : "broken",
+        "statusDetails" : "unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az199-82', ip: '10.1.0.49', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x555b6922ba63 <unknown>\n#1 0x555b68fa0458 <unknown>\n#2 0x555b68fc32e3 <unknown>\n#3 0x555b68fbee9f <unknown>\n#4 0x555b68ff8b72 <unknown>\n#5 0x555b68ff2fd3 <unknown>\n#6 0x555b68fc9514 <unknown>\n#7 0x555b68fca505 <unknown>\n#8 0x555b69257e2e <unknown>\n#9 0x555b6926d886 <unknown>\n#10 0x555b69258d75 <unknown>\n#11 0x555b6926ed94 <unknown>\n#12 0x555b6924f8eb <unknown>\n#13 0x555b69289cd8 <unknown>\n#14 0x555b69289e58 <unknown>\n#15 0x555b692a3dfd <unknown>\n#16 0x7fdd36577609 start_thread\n",
+        "time" : {
+          "start" : 1628451611180,
+          "stop" : 1628451612033,
+          "duration" : 853
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d3036478c5c14853.json",
+  "parameterValues" : [ ]
+}
