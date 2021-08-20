@@ -10,7 +10,6 @@ public class LoginPage {
     private final By EMAIL_FIELD = By.id("emailOrUserName");
     private final By PASSWORD_FIELD = By.id("password");
     public final By LOGIN_BUTTON = By.xpath("//div[@class='action-container']//button[1]");
-    private final By ACCEPT_COOKIES = By.xpath("//app-accept-cookie//button");
     public final By NOTIFICATION = By.xpath("//*[@class='notifier__notification-message ng-star-inserted']");
 
 
@@ -21,14 +20,13 @@ public class LoginPage {
     public void Login(String username, String password) {
         driver.findElement(EMAIL_FIELD).sendKeys(username);
         driver.findElement(PASSWORD_FIELD).sendKeys(password);
+
     }
 
     public void ClickLoginButton() {
         driver.findElement(LOGIN_BUTTON).click();
     }
 
-    public void ClickAcceptCookies() {
-        driver.findElement(ACCEPT_COOKIES).click();
-    }
+
 }
 

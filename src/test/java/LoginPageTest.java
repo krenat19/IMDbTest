@@ -12,24 +12,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginPageTest {
+public class LoginPageTest extends BaseTest {
 
-    WebDriver driver;
     LoginPage loginpage;
+    Util util;
     private final String URL = "https://igym-igym-dev.azurewebsites.net/authentication/login";
 
-    @BeforeEach
-    public void Setup() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
+
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
@@ -39,6 +28,7 @@ public class LoginPageTest {
         loginpage.Login("r01lfgpopg@privacy-mail.top", "123456");
         loginpage.ClickLoginButton();
     }
+
 
     @Test
     @Severity(SeverityLevel.NORMAL)
@@ -55,8 +45,9 @@ public class LoginPageTest {
     @Severity(SeverityLevel.NORMAL)
     public void LoginWithUnregisteredEmail() {
         loginpage = new LoginPage(driver);
+        util = new Util(driver);
         driver.get(URL);
-        loginpage.ClickAcceptCookies();
+        util.IgymClickAcceptCookies();
         loginpage.Login("kukutyin@zabhegyezes.hu", "jelszo1234");
         loginpage.ClickLoginButton();
         WebElement nonExistingUserAlert = driver.findElement(loginpage.NOTIFICATION);
@@ -68,8 +59,9 @@ public class LoginPageTest {
     @Severity(SeverityLevel.NORMAL)
     public void LoginWithUnconfirmedEmail() {
         loginpage = new LoginPage(driver);
+        util = new Util(driver);
         driver.get(URL);
-        loginpage.ClickAcceptCookies();
+        util.IgymClickAcceptCookies();
         loginpage.Login("rogici6615@186site.com", "training1000");
         loginpage.ClickLoginButton();
         WebElement unconfirmedEmail = driver.findElement(loginpage.NOTIFICATION);
@@ -92,8 +84,9 @@ public class LoginPageTest {
     @Severity(SeverityLevel.NORMAL)
     public void LoginWithIncorrectPassword() {
         loginpage = new LoginPage(driver);
+        util = new Util(driver);
         driver.get(URL);
-        loginpage.ClickAcceptCookies();
+        util.IgymClickAcceptCookies();
         loginpage.Login("r01lfgpopg@privacy-mail.top", "1234567");
         loginpage.ClickLoginButton();
         WebElement incorrectPasswordAlert = driver.findElement(loginpage.NOTIFICATION);
@@ -102,8 +95,5 @@ public class LoginPageTest {
     }
 
 
-    @AfterEach
-    public void Close() {
-        driver.quit();
-    }
+
 }
