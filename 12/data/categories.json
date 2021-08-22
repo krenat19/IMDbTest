@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "timeout: Timed out receiving message from renderer: 300.000\n  (Session info: headless chrome=92.0.4515.131)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az231-180', ip: '10.1.0.146', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.4Wtdak}, goog:chromeOptions: {debuggerAddress: localhost:41041}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 72c8b0ac72a9fd0cc3bfcf111147f2cd",
+      "children" : [ {
+        "name" : "T&C-01: Általános felhasználási feltételek meglétének ellenőrzése",
+        "uid" : "cda91350316c77e7",
+        "parentUid" : "b5e16b4332eaf405c82f6485ef0db51b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629667872020,
+          "stop" : 1629668175353,
+          "duration" : 303333
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b5e16b4332eaf405c82f6485ef0db51b"
+    }, {
+      "name" : "timeout: Timed out receiving message from renderer: 300.000\n  (Session info: headless chrome=92.0.4515.131)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az231-180', ip: '10.1.0.146', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.k6GBM6}, goog:chromeOptions: {debuggerAddress: localhost:34915}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: e225763749c59dfc34263363bb92fe1a",
+      "children" : [ {
+        "name" : "T&C-02: Adatvédelmi feltételek meglétének ellenőrzése",
+        "uid" : "9751bdcb248ec11",
+        "parentUid" : "ce7e62bd293db0d0976b6ace0621bee1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629668216526,
+          "stop" : 1629668519859,
+          "duration" : 303333
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ce7e62bd293db0d0976b6ace0621bee1"
+    }, {
+      "name" : "Cannot invoke \"ProfilePage.AcceptCookies()\" because \"this.profilePage\" is null",
+      "children" : [ {
+        "name" : "DATA-01: Új adat bevitele a bemutatkozás mezőbe",
+        "uid" : "ce9cd719066280d7",
+        "parentUid" : "68c3641c47981b638c5f37c511813ed3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629668599429,
+          "stop" : 1629668602627,
+          "duration" : 3198
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "68c3641c47981b638c5f37c511813ed3"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
