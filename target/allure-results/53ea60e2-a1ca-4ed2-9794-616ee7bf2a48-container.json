@@ -1,0 +1,1 @@
+{"uuid":"53ea60e2-a1ca-4ed2-9794-616ee7bf2a48","name":"RegisterHappyPathTest()","children":["c7302ad1-c949-4420-85b8-8391fbbb344e"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629475888862,"stop":1629475890485}],"afters":[],"links":[],"start":1629475888773,"stop":1629475914616}

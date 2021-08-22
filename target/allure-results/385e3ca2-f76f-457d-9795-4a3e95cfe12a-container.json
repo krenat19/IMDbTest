@@ -1,0 +1,1 @@
+{"uuid":"385e3ca2-f76f-457d-9795-4a3e95cfe12a","name":"LOGIN-07: Bejelentkezés helytelen jelszóval","children":["75acc4a9-6f9d-4b81-81f0-b94910ed7f16"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629563293327,"stop":1629563294976}],"afters":[],"links":[],"start":1629563293250,"stop":1629563297689}

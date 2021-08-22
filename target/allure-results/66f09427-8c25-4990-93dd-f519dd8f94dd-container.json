@@ -1,0 +1,1 @@
+{"uuid":"66f09427-8c25-4990-93dd-f519dd8f94dd","name":"REG-04: Regisztráció nem egyező jelszavakkal","children":["465f2315-8155-416b-801c-632163c73877"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629478900907,"stop":1629478902529}],"afters":[],"links":[],"start":1629478900818,"stop":1629478908933}

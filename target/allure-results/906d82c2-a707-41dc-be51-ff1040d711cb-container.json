@@ -1,0 +1,1 @@
+{"uuid":"906d82c2-a707-41dc-be51-ff1040d711cb","name":"REG-07: Regisztráció ÁSZF elfogadása nélkül","children":["58c5ea09-26e2-4673-aff3-5a25a50e9212"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629479532249,"stop":1629479533904}],"afters":[],"links":[],"start":1629479532156,"stop":1629479538570}

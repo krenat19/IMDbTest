@@ -1,0 +1,1 @@
+{"uuid":"f4283e64-7486-4311-a0dd-d63d73bf2e15","name":"REG-08: Regisztráció már létező felhasználóval","children":["67889931-5266-4760-8971-f60fffe3b964"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629480349198,"stop":1629480350869}],"afters":[],"links":[],"start":1629480349112,"stop":1629480353310}

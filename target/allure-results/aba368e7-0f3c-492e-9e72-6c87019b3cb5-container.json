@@ -1,0 +1,1 @@
+{"uuid":"aba368e7-0f3c-492e-9e72-6c87019b3cb5","name":"REG-03: Regisztráció érvénytelen jelszóval","children":["f1f0815c-c8a9-465e-9137-9c9a3a76dcfc"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629478654772,"stop":1629478656433}],"afters":[],"links":[],"start":1629478654688,"stop":1629478661135}

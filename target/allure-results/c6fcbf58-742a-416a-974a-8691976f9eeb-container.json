@@ -1,0 +1,1 @@
+{"uuid":"c6fcbf58-742a-416a-974a-8691976f9eeb","name":"SEARCH-01: Adatok listázása kereséssel","children":["f4a5bb26-fb4d-40c4-97bd-567a8ea7f312"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629656618740,"stop":1629656620281}],"afters":[],"links":[],"start":1629656618676,"stop":1629656623502}

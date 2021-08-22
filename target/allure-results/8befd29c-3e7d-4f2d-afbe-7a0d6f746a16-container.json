@@ -1,0 +1,1 @@
+{"uuid":"8befd29c-3e7d-4f2d-afbe-7a0d6f746a16","name":"LIST-01: Többoldalas lista bejárása","children":["6dcda219-3fb7-47d1-8c42-f6cfc5e86ce9"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629650715427,"stop":1629650716973}],"afters":[],"links":[],"start":1629650715354,"stop":1629650742317}

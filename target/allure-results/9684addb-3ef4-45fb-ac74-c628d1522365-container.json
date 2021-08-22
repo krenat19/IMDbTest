@@ -1,0 +1,1 @@
+{"uuid":"9684addb-3ef4-45fb-ac74-c628d1522365","name":"AddNewTrainingTest()","children":["6d64898c-c32f-4ae3-b92a-4fa2c5ded171"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629633505809,"stop":1629633507925}],"afters":[],"links":[],"start":1629633505709,"stop":1629633513445}

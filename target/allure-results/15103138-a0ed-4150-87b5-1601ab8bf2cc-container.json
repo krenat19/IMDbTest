@@ -1,0 +1,1 @@
+{"uuid":"15103138-a0ed-4150-87b5-1601ab8bf2cc","name":"LOGOUT-01: Kijelentkezés kattintással","children":["a98865cf-7ce7-4ce4-b219-f4ee29883d91"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629564994450,"stop":1629564996163}],"afters":[],"links":[],"start":1629564994376,"stop":1629564998749}

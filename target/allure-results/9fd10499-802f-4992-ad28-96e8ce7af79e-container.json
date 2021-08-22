@@ -1,0 +1,1 @@
+{"uuid":"9fd10499-802f-4992-ad28-96e8ce7af79e","name":"SEARCH-02: Edzők neveinek mentése txt fájlba","children":["79c522fd-1fab-4e37-8db9-8c4b86163c3d"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629657581827,"stop":1629657583372}],"afters":[],"links":[],"start":1629657581748,"stop":1629657585184}

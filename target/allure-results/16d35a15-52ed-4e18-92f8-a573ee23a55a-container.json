@@ -1,0 +1,1 @@
+{"uuid":"16d35a15-52ed-4e18-92f8-a573ee23a55a","name":"REG-02: Regisztráció invalid email-címmel","children":["270c4b65-2407-4dfa-9e9b-21266fc476fb"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629478107850,"stop":1629478109489}],"afters":[],"links":[],"start":1629478107767,"stop":1629478111540}

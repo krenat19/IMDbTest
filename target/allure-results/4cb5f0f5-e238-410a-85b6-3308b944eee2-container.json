@@ -1,0 +1,1 @@
+{"uuid":"4cb5f0f5-e238-410a-85b6-3308b944eee2","name":"DATA-01: Új adat bevitele a bemutatkozás mezőbe","children":["6647a373-5774-448b-9cf7-f6a65162469e"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629663649395,"stop":1629663650945}],"afters":[],"links":[],"start":1629663649325,"stop":1629663676166}

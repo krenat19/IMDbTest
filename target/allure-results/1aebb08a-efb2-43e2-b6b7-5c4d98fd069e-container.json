@@ -1,0 +1,1 @@
+{"uuid":"1aebb08a-efb2-43e2-b6b7-5c4d98fd069e","name":"DATA-03: Meglévő adat törlése","children":["57d711ed-96bf-4e0d-83be-5a8cd788c3e9"],"befores":[{"name":"Setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629664439388,"stop":1629664440905}],"afters":[],"links":[],"start":1629664439318,"stop":1629664465232}
