@@ -1,10 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,85 +12,75 @@ import java.util.concurrent.TimeUnit;
 public class LoginPageTest extends BaseTest {
 
     LoginPage loginpage;
+    CalendarPage calendarPage;
     Util util;
-    private final String URL = "https://igym-igym-dev.azurewebsites.net/authentication/login";
-
 
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("LOGIN-01: Normál bejelentkezés")
     public void LoginTest() {
         loginpage = new LoginPage(driver);
-        driver.get(URL);
-        loginpage.Login("r01lfgpopg@privacy-mail.top", "123456");
-        loginpage.ClickLoginButton();
+        loginpage.NavigateToLoginPage();
+        calendarPage = loginpage.Login(TestData.TRAINER_EMAIL, TestData.TRAINER_PASSWORD);
+        String msg = calendarPage.GetWelcomeMessage();
+        Assertions.assertEquals("Hello, " + TestData.TRAINER_FIRSTNAME, msg);
     }
 
 
     @Test
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("LOGIN-02: Bejelentkezés üres mezőkkel")
     public void EmptyLoginTest() {
         loginpage = new LoginPage(driver);
-        driver.get(URL);
-        loginpage.Login("", "");
-        WebElement loginButton = driver.findElement(loginpage.LOGIN_BUTTON);
-        boolean isLoginButtonActive = loginButton.isEnabled();
+        boolean isLoginButtonActive = loginpage.EmptyLogin();
         Assertions.assertFalse(isLoginButtonActive);
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    public void LoginWithUnregisteredEmail() {
+    @DisplayName("LOGIN-03: Bejelentkezés nem regisztrált email-címmel")
+    public void LoginWithUnregisteredEmailTest() {
         loginpage = new LoginPage(driver);
-        util = new Util(driver);
-        driver.get(URL);
-        util.IgymClickAcceptCookies();
-        loginpage.Login("kukutyin@zabhegyezes.hu", "jelszo1234");
-        loginpage.ClickLoginButton();
-        WebElement nonExistingUserAlert = driver.findElement(loginpage.NOTIFICATION);
-        boolean isAlertVisible = nonExistingUserAlert.isDisplayed();
-        Assertions.assertTrue(isAlertVisible);
+        String notificationMessage = loginpage.LoginWithUnregisteredEmail();
+        Assertions.assertEquals(TestData.USER_DOESNT_EXIST_NOTIFICATION, notificationMessage);
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    public void LoginWithUnconfirmedEmail() {
+    @DisplayName("LOGIN-04: Bejelentkezés regisztrált, de nem megerősített email-címmel")
+    public void LoginWithUnconfirmedEmailTest() {
         loginpage = new LoginPage(driver);
-        util = new Util(driver);
-        driver.get(URL);
-        util.IgymClickAcceptCookies();
-        loginpage.Login("rogici6615@186site.com", "training1000");
-        loginpage.ClickLoginButton();
-        WebElement unconfirmedEmail = driver.findElement(loginpage.NOTIFICATION);
-        String alertText = unconfirmedEmail.getText();
-        Assertions.assertEquals("Az email cím nincs megerősítve", alertText);
+        String notificationMessage = loginpage.LoginWithUnconfirmedEmail();
+        Assertions.assertEquals(TestData.UNCONFIRMED_EMAIL_ADDRESS_NOTIFICATION, notificationMessage);
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    public void LoginWithoutPassword() {
+    @DisplayName("LOGIN-05: Bejelentkezés felhasználónév megadása nélkül")
+    public void LoginWithoutUsernameTest() {
         loginpage = new LoginPage(driver);
-        driver.get(URL);
-        loginpage.Login("r01lfgpopg@privacy-mail.top", "");
-        WebElement loginButton = driver.findElement(loginpage.LOGIN_BUTTON);
-        boolean isLoginButtonActive = loginButton.isEnabled();
+        boolean isLoginButtonActive = loginpage.LoginWithoutUsername();
         Assertions.assertFalse(isLoginButtonActive);
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    public void LoginWithIncorrectPassword() {
+    @DisplayName("LOGIN-06: Bejelentkezés jelszó megadása nélkül")
+    public void LoginWithoutPasswordTest() {
         loginpage = new LoginPage(driver);
-        util = new Util(driver);
-        driver.get(URL);
-        util.IgymClickAcceptCookies();
-        loginpage.Login("r01lfgpopg@privacy-mail.top", "1234567");
-        loginpage.ClickLoginButton();
-        WebElement incorrectPasswordAlert = driver.findElement(loginpage.NOTIFICATION);
-        boolean isAlertVisible = incorrectPasswordAlert.isDisplayed();
-        Assertions.assertTrue(isAlertVisible);
+        boolean isLoginButtonActive = loginpage.LoginWithoutPassword();
+        Assertions.assertFalse(isLoginButtonActive);
     }
 
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("LOGIN-07: Bejelentkezés helytelen jelszóval")
+    public void LoginWithIncorrectPasswordTest() {
+        loginpage = new LoginPage(driver);
+        String notificationMessage = loginpage.LoginWithIncorrectPassword();
+        Assertions.assertEquals(TestData.UNSUCCESSFUL_LOGIN_NOTIFICATION, notificationMessage);
+    }
 
 
 }

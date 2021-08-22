@@ -39,7 +39,4 @@ public class Util {
         driver.findElement(EMAIL_LINK).click();
     }
 
-    public void IgymClickAcceptCookies() {
-        driver.findElement(IGYM_ACCEPT_COOKIES).click();
-    }
 }

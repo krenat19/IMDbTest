@@ -11,14 +11,45 @@ public class RegisterPageTest extends BaseTest {
     Util util;
     RegisterPage registerPage;
 
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("T&C-01: Általános felhasználási feltételek meglétének ellenőrzése")
+    public void CheckingTermsAndConditionsTest() {
+        registerPage = new RegisterPage(driver);
+        driver.get(TestData.REGISTRATION_URL);
+        boolean result = registerPage.CheckingTermsAndConditions();
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("T&C-02: Adatvédelmi feltételek meglétének ellenőrzése")
+    public void CheckingPrivacyPolicyTest() {
+        registerPage = new RegisterPage(driver);
+        driver.get(TestData.REGISTRATION_URL);
+        boolean result = registerPage.CheckingPrivacyPolicy();
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("T&C-03: Cookie-k elfogadása")
+    public void AcceptCookiesTest() {
+        registerPage = new RegisterPage(driver);
+        driver.get(TestData.REGISTRATION_URL);
+        int CookieBarDisplayed = registerPage.AcceptCookies();
+        Assertions.assertEquals(0, CookieBarDisplayed);
+    }
+
+
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("REG-01: Normál regisztráció")
     public void RegisterHappyPathTest() {
         registerPage = new RegisterPage(driver);
         registerPage.RegisterHappyPath();
-        String currentURL = driver.getCurrentUrl();
-        Assertions.assertEquals(TestData.LOGIN_URL, currentURL);
+        Assertions.assertEquals(TestData.LOGIN_URL, driver.getCurrentUrl());
     }
 
     @Test
