@@ -1,0 +1,156 @@
+{
+  "uid" : "307c37f513f046f7",
+  "name" : "REG-05: Regisztráció ÁSZF és adatvédelmi feltételek elfogadása nélkül",
+  "fullName" : "RegisterPageTest.RegisterWithoutAcceptingTermsAndConditionsAndPrivacyPolicyTest",
+  "historyId" : "3c4039308ed23c12d86ca8aad8cfc773",
+  "time" : {
+    "start" : 1629751461878,
+    "stop" : 1629751465066,
+    "duration" : 3188
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setup",
+    "time" : {
+      "start" : 1629751461878,
+      "stop" : 1629751462155,
+      "duration" : 277
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "Close",
+    "time" : {
+      "start" : 1629751464996,
+      "stop" : 1629751465065,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az182-4"
+  }, {
+    "name" : "thread",
+    "value" : "5621@fv-az182-4.ForkJoinPool-1-worker-3(16)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "RegisterPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "RegisterPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "RegisterWithoutAcceptingTermsAndConditionsAndPrivacyPolicyTest"
+  }, {
+    "name" : "suite",
+    "value" : "RegisterPageTest"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "cfe75fd84517d2ad",
+        "reportUrl" : "https://krenat19.github.io/igym_test/15//#testresult/cfe75fd84517d2ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629737338582,
+          "stop" : 1629737341689,
+          "duration" : 3107
+        }
+      }, {
+        "uid" : "18da94a04e6f83ec",
+        "reportUrl" : "https://krenat19.github.io/igym_test/14//#testresult/18da94a04e6f83ec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629708915534,
+          "stop" : 1629708920425,
+          "duration" : 4891
+        }
+      }, {
+        "uid" : "e1ec5726a903ebe",
+        "reportUrl" : "https://krenat19.github.io/igym_test/13//#testresult/e1ec5726a903ebe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629708691326,
+          "stop" : 1629708696083,
+          "duration" : 4757
+        }
+      }, {
+        "uid" : "df8983caf4238175",
+        "reportUrl" : "https://krenat19.github.io/igym_test/12//#testresult/df8983caf4238175",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629668528624,
+          "stop" : 1629668533218,
+          "duration" : 4594
+        }
+      }, {
+        "uid" : "39663c395098db54",
+        "reportUrl" : "https://krenat19.github.io/igym_test/11//#testresult/39663c395098db54",
+        "status" : "broken",
+        "statusDetails" : "unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az272-514', ip: '10.1.1.127', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x55b56ae4ca63 <unknown>\n#1 0x55b56abc1458 <unknown>\n#2 0x55b56abe42e3 <unknown>\n#3 0x55b56abdfe9f <unknown>\n#4 0x55b56ac19b72 <unknown>\n#5 0x55b56ac13fd3 <unknown>\n#6 0x55b56abea514 <unknown>\n#7 0x55b56abeb505 <unknown>\n#8 0x55b56ae78e2e <unknown>\n#9 0x55b56ae8e886 <unknown>\n#10 0x55b56ae79d75 <unknown>\n#11 0x55b56ae8fd94 <unknown>\n#12 0x55b56ae708eb <unknown>\n#13 0x55b56aeaacd8 <unknown>\n#14 0x55b56aeaae58 <unknown>\n#15 0x55b56aec4dfd <unknown>\n#16 0x7f07bd191609 start_thread\n",
+        "time" : {
+          "start" : 1629666717365,
+          "stop" : 1629666717586,
+          "duration" : 221
+        }
+      }, {
+        "uid" : "d204d20af95bb384",
+        "reportUrl" : "https://krenat19.github.io/igym_test/10//#testresult/d204d20af95bb384",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629481511341,
+          "stop" : 1629481516076,
+          "duration" : 4735
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "307c37f513f046f7.json",
+  "parameterValues" : [ ]
+}
