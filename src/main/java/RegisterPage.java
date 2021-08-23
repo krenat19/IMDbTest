@@ -1,13 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class RegisterPage {
@@ -30,28 +26,27 @@ public class RegisterPage {
         this.driver = driver;
     }
 
-    public boolean CheckingTermsAndConditions() {
+
+    public boolean VerifyPDF() {
         boolean result = false;
+        String address = driver.getCurrentUrl();
+        if (address.contains(".pdf")) {
+            result = true;
+        }
+        return result;
+
+    }
+    public void CheckingTermsAndConditions() {
         driver.findElement(TERMS_AND_CONDITIONS_LINK).click();
         ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        String address = driver.getCurrentUrl();
-        if (address.contains(".pdf")) {
-            result = true;
-        }
-        return result;
     }
 
-    public boolean CheckingPrivacyPolicy() {
-        boolean result = false;
+
+    public void CheckingPrivacyPolicy() {
         driver.findElement(PRIVACY_POLICY_LINK).click();
         ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        String address = driver.getCurrentUrl();
-        if (address.contains(".pdf")) {
-            result = true;
-        }
-        return result;
     }
 
     public int AcceptCookies() {
@@ -59,128 +54,63 @@ public class RegisterPage {
         return driver.findElements(COOKIE_BOTTOM_BAR).size();
     }
 
+    public void AcceptTermsAndConditions() {
+        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
+    }
+
+    public void AcceptPrivacyPolicy() {
+        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
+    }
+
+    public String GetNotificationText() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
+    }
+
+    public boolean IsRegisterButtonActive() {
+        return driver.findElement(REGISTER_BUTTON).isEnabled();
+    }
+
+    public void ClickRegisterButton() {
+        driver.findElement(REGISTER_BUTTON).click();
+    }
 
 
-    public String RegisterWithoutConfirming() {
+    public String RegisterBasic(String password, String confirmpassword) {
         util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
+        String email = util.GenerateNewEmail();
         ((JavascriptExecutor)driver).executeScript("window.open()");
         ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
-        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        driver.findElement(REGISTER_BUTTON).click();
-        return reg_email;
+        driver.findElement(EMAIL).sendKeys(email);
+        driver.findElement(PASSWORD).sendKeys(password);
+        driver.findElement(CONFIRM_PASSWORD).sendKeys(confirmpassword);
+        return email;
     }
 
     public void RegisterHappyPath() {
-        RegisterWithoutConfirming();
+        RegisterBasic(TestData.REG_PASSWORD, TestData.REG_PASSWORD);
+        AcceptTermsAndConditions();
+        AcceptPrivacyPolicy();
+        ClickRegisterButton();
         ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0));
         util.ConfirmEmail();
         driver.switchTo().window(tabs.get(1));
     }
 
-    public boolean RegisterWithInvalidEmail() {
+    public void RegisterWithInvalidEmail() {
         driver.findElement(EMAIL).sendKeys(TestData.INVALID_EMAIL);
         driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
         driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
         driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
         driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
     }
 
-    public boolean RegisterWithInvalidPassword() {
-        util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.INVALID_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.INVALID_PASSWORD);
-        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
-        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
-    }
-
-    public boolean RegisterWithMismatchedPassword() {
-        util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.MISMATCHED_PASSWORD);
-        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
-        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
-    }
-
-    public boolean RegisterWithoutAcceptingTermsAndConditionsAndPrivacyPolicy() {
-        util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
-    }
-
-    public boolean RegisterWithoutAcceptingPrivacyPolicy() {
-        util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
-    }
-
-    public boolean RegisterWithoutAcceptingTermsAndConditions() {
-        util = new Util(driver);
-        String reg_email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        driver.get(TestData.REGISTRATION_URL);
-        driver.findElement(EMAIL).sendKeys(reg_email);
-        driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        boolean isRegisterButtonActive = driver.findElement(REGISTER_BUTTON).isEnabled();
-        return isRegisterButtonActive;
-    }
-
-    public String RegisterAlreadyExistingUser() {
-        driver.get(TestData.REGISTRATION_URL);
+    public void RegisterAlreadyExistingUser() {
         driver.findElement(EMAIL).sendKeys(TestData.TRAINER_EMAIL);
         driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
         driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
-        driver.findElement(TERMS_AND_CONDITIONS_CHECKBOX).click();
-        driver.findElement(PRIVACY_POLICY_CHECKBOX).click();
-        driver.findElement(REGISTER_BUTTON).click();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        String notificationMessage = wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
-        return notificationMessage;
     }
 }

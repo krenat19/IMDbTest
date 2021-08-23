@@ -62,12 +62,13 @@ public class ProfilePage {
     public boolean retryingFindClick(By element) {
         boolean result = false;
         int attempts = 0;
-        while(attempts < 2) {
+        while(attempts < 5) {
             try {
                 driver.findElement(element).click();
                 result = true;
                 break;
             } catch(StaleElementReferenceException e) {
+                System.out.println("An error occurred.");
             }
             attempts++;
         }

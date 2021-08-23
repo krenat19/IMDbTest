@@ -21,8 +21,7 @@ public class LoginPage {
 
     public String GetNotificationMessage() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        String notificationMessage = wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
-        return notificationMessage;
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
     }
 
 
@@ -48,7 +47,10 @@ public class LoginPage {
 
     public void LoginWithUnconfirmedEmail() {
         registerPage = new RegisterPage(driver);
-        String reg_email = registerPage.RegisterWithoutConfirming();
+        String reg_email = registerPage.RegisterBasic(TestData.REG_PASSWORD, TestData.REG_PASSWORD);
+        registerPage.AcceptTermsAndConditions();
+        registerPage.AcceptPrivacyPolicy();
+        registerPage.ClickRegisterButton();
         driver.get(TestData.LOGIN_URL);
         Login(reg_email, TestData.REG_PASSWORD);
     }

@@ -1,19 +1,12 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.concurrent.TimeUnit;
 
 public class LoginPageTest extends BaseTest {
 
     LoginPage loginpage;
     CalendarPage calendarPage;
-    Util util;
 
 
     @Test

@@ -2,15 +2,12 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
-import java.util.Locale;
 
 public class ProfilePageTest extends BaseTest{
 
     ProfilePage profilePage;
-
     LoginPage loginPage;
     CalendarPage calendarPage;
 

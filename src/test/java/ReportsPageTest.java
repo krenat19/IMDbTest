@@ -19,9 +19,9 @@ public class ReportsPageTest extends BaseTest {
         loginPage = new LoginPage(driver);
         calendarPage = loginPage.Login(TestData.TRAINER_EMAIL, TestData.TRAINER_PASSWORD);
         reportsPage = calendarPage.NavigateToReportsPage();
+        //number of how many pages you want to iterate through
         int pagesToScan = 20;
         int numberOfCards = reportsPage.CountReports(pagesToScan);
-        System.out.println(numberOfCards);
-        Assertions.assertTrue(numberOfCards == pagesToScan * 20);
+        Assertions.assertEquals(numberOfCards, pagesToScan * 20);
     }
 }
