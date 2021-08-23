@@ -8,7 +8,6 @@ public class LoginPageTest extends BaseTest {
     LoginPage loginpage;
     CalendarPage calendarPage;
 
-
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("LOGIN-01: Normál bejelentkezés")
@@ -19,7 +18,6 @@ public class LoginPageTest extends BaseTest {
         String msg = calendarPage.GetWelcomeMessage();
         Assertions.assertEquals("Hello, " + TestData.TRAINER_FIRSTNAME, msg);
     }
-
 
     @Test
     @Severity(SeverityLevel.NORMAL)
@@ -83,6 +81,4 @@ public class LoginPageTest extends BaseTest {
         String notificationMessage = loginpage.GetNotificationMessage();
         Assertions.assertEquals(TestData.UNSUCCESSFUL_LOGIN_NOTIFICATION, notificationMessage);
     }
-
-
 }

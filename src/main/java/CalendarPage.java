@@ -19,7 +19,6 @@ public class CalendarPage {
     private final By PROFILE_BUTTON = By.xpath("//*[@class='toolbar-container ng-tns-c186-0']/div/app-profile-pic");
 
 
-
     public CalendarPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -45,7 +44,6 @@ public class CalendarPage {
         return wait.until(ExpectedConditions.visibilityOf(driver.findElement(LOGIN_BUTTON))).getText();
     }
 
-
     public void Logout() {
         loginPage = new LoginPage(driver);
         driver.get(TestData.LOGIN_URL);
@@ -56,8 +54,8 @@ public class CalendarPage {
     public void LogoutWithDuplicateLogin() {
         loginPage = new LoginPage(driver);
         driver.get(TestData.LOGIN_URL);
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.get(TestData.LOGIN_URL);
         driver.switchTo().window(tabs.get(0));
@@ -67,7 +65,7 @@ public class CalendarPage {
         driver.switchTo().window(tabs.get(0));
         driver.navigate().refresh();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -80,13 +78,12 @@ public class CalendarPage {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(WELCOME_MESSAGE)));
         String currentURL = driver.getCurrentUrl();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.get(currentURL);
         driver.findElement(LOGOUT_BUTTON).click();
         driver.switchTo().window(tabs.get(0));
         driver.navigate().refresh();
     }
-
 }

@@ -3,12 +3,10 @@ import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 public class CalendarPageTest extends BaseTest {
 
     CalendarPage calendarPage;
-
 
     @Test
     @Severity(SeverityLevel.CRITICAL)

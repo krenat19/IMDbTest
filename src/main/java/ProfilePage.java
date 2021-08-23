@@ -1,18 +1,11 @@
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-import java.io.FileNotFoundException;
-import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 
 public class ProfilePage {
 
@@ -59,31 +52,15 @@ public class ProfilePage {
         return driver.findElement(PROFILE_DESCRIPTION).getText();
     }
 
-    public boolean retryingFindClick(By element) {
-        boolean result = false;
-        int attempts = 0;
-        while(attempts < 5) {
-            try {
-                driver.findElement(element).click();
-                result = true;
-                break;
-            } catch(StaleElementReferenceException e) {
-                System.out.println("An error occurred.");
-            }
-            attempts++;
-        }
-        return result;
-    }
-
+    //reads text from file and sends it to the specified element
     public void InputData(By element, int index) {
         util = new Util(driver);
         List<String> data = util.ReadFromFile("companydata.txt");
-        if (retryingFindClick(element)) {
+        if (util.retryingFindClick(element)) {
             driver.findElement(element).sendKeys(Keys.CONTROL + "a");
             driver.findElement(element).sendKeys(Keys.BACK_SPACE);
             driver.findElement(element).sendKeys(data.get(index));
         }
-
     }
 
     public String AddCompanyData() {
@@ -98,6 +75,4 @@ public class ProfilePage {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         return wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
     }
-
-
 }

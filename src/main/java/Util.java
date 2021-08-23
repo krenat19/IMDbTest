@@ -1,8 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Util {
 
@@ -22,7 +17,6 @@ public class Util {
     private final By TEMPMAIL_COOKIE_POLICY_BUTTON = By.xpath("//*[@class='cookie_policy_close']");
     private final By EMAIL_TITLE = By.xpath("//*[@id='mails']/div[1]");
     private final By EMAIL_LINK = By.xpath("//*[@id='tm-message']//a");
-    private final By IGYM_ACCEPT_COOKIES = By.xpath("//app-accept-cookie//button");
 
 
     public Util(WebDriver driver) {
@@ -34,8 +28,7 @@ public class Util {
         driver.get(TestData.TEMP_MAIL_URL);
         driver.findElement(TEMPMAIL_COOKIE_POLICY_BUTTON).click();
         driver.findElement(TEMPMAIL_RANDOM_BUTTON).click();
-        String email = driver.findElement(TEMP_EMAIL_ADDRESS).getAttribute("value");
-        return email;
+        return driver.findElement(TEMP_EMAIL_ADDRESS).getAttribute("value");
     }
 
     //confirming the registration
@@ -45,7 +38,8 @@ public class Util {
         driver.findElement(EMAIL_LINK).click();
     }
 
-    public List<String> ReadFromFile(String filename)  {
+    //converts data from a txt file into a list
+    public List<String> ReadFromFile(String filename) {
         List<String> text = new ArrayList<>();
         try {
             File file = new File(filename);
@@ -60,4 +54,20 @@ public class Util {
         return text;
     }
 
+    //this method helps avoid getting StaleElementException
+    public boolean retryingFindClick(By element) {
+        boolean result = false;
+        int attempts = 0;
+        while (attempts < 5) {
+            try {
+                driver.findElement(element).click();
+                result = true;
+                break;
+            } catch (StaleElementReferenceException e) {
+                System.out.println("An error occurred.");
+            }
+            attempts++;
+        }
+        return result;
+    }
 }

@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
-public class ProfilePageTest extends BaseTest{
+public class ProfilePageTest extends BaseTest {
 
     ProfilePage profilePage;
     LoginPage loginPage;
@@ -49,7 +48,6 @@ public class ProfilePageTest extends BaseTest{
         profilePage.AcceptCookies();
         String msg = profilePage.DeleteIntroduction();
         Assertions.assertEquals("", msg);
-
     }
 
     @Test
@@ -63,6 +61,5 @@ public class ProfilePageTest extends BaseTest{
         profilePage.AcceptCookies();
         String msg = profilePage.AddCompanyData();
         Assertions.assertEquals(TestData.SUCCESSFUL_COMPANY_DATA_UPLOAD, msg);
-
     }
 }

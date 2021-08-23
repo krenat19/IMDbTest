@@ -10,7 +10,6 @@ public class ReportsPageTest extends BaseTest {
     CalendarPage calendarPage;
     ReportsPage reportsPage;
 
-
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("LIST-01: Többoldalas lista bejárása")

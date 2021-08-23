@@ -43,7 +43,6 @@ public class RegisterPageTest extends BaseTest {
         Assertions.assertEquals(0, CookieBarDisplayed);
     }
 
-
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("REG-01: Normál regisztráció")

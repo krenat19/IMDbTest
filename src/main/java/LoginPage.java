@@ -19,11 +19,11 @@ public class LoginPage {
         this.driver = driver;
     }
 
+
     public String GetNotificationMessage() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         return wait.until(ExpectedConditions.visibilityOf(driver.findElement(NOTIFICATION))).getText();
     }
-
 
     public boolean IsLoginButtonActive() {
         return driver.findElement(LOGIN_BUTTON).isEnabled();
@@ -35,8 +35,6 @@ public class LoginPage {
         driver.findElement(LOGIN_BUTTON).click();
         return new CalendarPage(driver);
     }
-
-
 
     public void LoginWithUnregisteredEmail() {
         util = new Util(driver);
@@ -54,8 +52,5 @@ public class LoginPage {
         driver.get(TestData.LOGIN_URL);
         Login(reg_email, TestData.REG_PASSWORD);
     }
-
-
-
 }
 

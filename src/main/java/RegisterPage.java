@@ -10,6 +10,7 @@ public class RegisterPage {
 
     WebDriver driver;
     Util util;
+
     private final By EMAIL = By.id("email");
     private final By PASSWORD = By.id("password");
     private final By CONFIRM_PASSWORD = By.id("confirmPassword");
@@ -34,18 +35,17 @@ public class RegisterPage {
             result = true;
         }
         return result;
-
     }
+
     public void CheckingTermsAndConditions() {
         driver.findElement(TERMS_AND_CONDITIONS_LINK).click();
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
     }
 
-
     public void CheckingPrivacyPolicy() {
         driver.findElement(PRIVACY_POLICY_LINK).click();
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
     }
 
@@ -75,12 +75,11 @@ public class RegisterPage {
         driver.findElement(REGISTER_BUTTON).click();
     }
 
-
     public String RegisterBasic(String password, String confirmpassword) {
         util = new Util(driver);
         String email = util.GenerateNewEmail();
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.get(TestData.REGISTRATION_URL);
         driver.findElement(EMAIL).sendKeys(email);
@@ -94,7 +93,7 @@ public class RegisterPage {
         AcceptTermsAndConditions();
         AcceptPrivacyPolicy();
         ClickRegisterButton();
-        ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0));
         util.ConfirmEmail();
         driver.switchTo().window(tabs.get(1));

@@ -19,6 +19,7 @@ public class ReportsPage {
         this.driver = driver;
     }
 
+
     public int CountReports(int pages) {
         driver.findElement(ACCEPT_COOKIES_BUTTON).click();
         int numberOfCards = 0;
@@ -26,6 +27,7 @@ public class ReportsPage {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
             WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(FURTHER_REPORTS_BUTTON))).click();
+            //sleep is necessary as the elements are loading increasingly slower as we iterate through the pages
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -34,7 +36,6 @@ public class ReportsPage {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
             List<WebElement> reportCards = driver.findElements(REPORT_CARD);
             numberOfCards = reportCards.size();
-
         }
         return numberOfCards;
     }

@@ -17,9 +17,9 @@ public class TrainersPageTest extends BaseTest {
     public void SearchForTrainersTest() {
         driver.get(TestData.TRAINERS_PAGE_URL);
         trainersPage = new TrainersPage(driver);
-        boolean matchingResult = trainersPage.SearchForTrainers("Adri");
+        trainersPage.AcceptCookies();
+        boolean matchingResult = trainersPage.SearchForTrainers("Verő");
         Assertions.assertTrue(matchingResult);
-
     }
 
     @Test
@@ -29,7 +29,6 @@ public class TrainersPageTest extends BaseTest {
         driver.get(TestData.TRAINERS_PAGE_URL);
         trainersPage = new TrainersPage(driver);
         int foundTrainers = trainersPage.SaveTrainersToFile();
-
         int lines = 0;
         try {
             BufferedReader reader = new BufferedReader(new FileReader("trainers.txt"));
@@ -39,7 +38,6 @@ public class TrainersPageTest extends BaseTest {
                 Exception ex) {
             ex.printStackTrace();
         }
-
         Assertions.assertEquals(foundTrainers, lines);
     }
 }
