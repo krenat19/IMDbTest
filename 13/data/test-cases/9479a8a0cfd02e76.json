@@ -1,0 +1,88 @@
+{
+  "uid" : "9479a8a0cfd02e76",
+  "name" : "LIST-01: Többoldalas lista bejárása",
+  "fullName" : "ReportsPageTest.CountReportsTest",
+  "historyId" : "193017e789522efcbeb0319991bdfead",
+  "time" : {
+    "start" : 1629708694229,
+    "stop" : 1629708720658,
+    "duration" : 26429
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setup",
+    "time" : {
+      "start" : 1629708694230,
+      "stop" : 1629708694488,
+      "duration" : 258
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "Close",
+    "time" : {
+      "start" : 1629708720581,
+      "stop" : 1629708720657,
+      "duration" : 76
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az199-487"
+  }, {
+    "name" : "thread",
+    "value" : "3006@fv-az199-487.ForkJoinPool-1-worker-3(16)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "ReportsPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "ReportsPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "CountReportsTest"
+  }, {
+    "name" : "suite",
+    "value" : "ReportsPageTest"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9479a8a0cfd02e76.json",
+  "parameterValues" : [ ]
+}

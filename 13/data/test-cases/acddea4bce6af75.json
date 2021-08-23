@@ -1,0 +1,88 @@
+{
+  "uid" : "acddea4bce6af75",
+  "name" : "SEARCH-01: Adatok listázása kereséssel",
+  "fullName" : "TrainersPageTest.SearchForTrainersTest",
+  "historyId" : "b9dc6caeb7c6ed92cbdb86661e991abc",
+  "time" : {
+    "start" : 1629708613592,
+    "stop" : 1629708617463,
+    "duration" : 3871
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setup",
+    "time" : {
+      "start" : 1629708613595,
+      "stop" : 1629708614022,
+      "duration" : 427
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "Close",
+    "time" : {
+      "start" : 1629708617393,
+      "stop" : 1629708617462,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az199-487"
+  }, {
+    "name" : "thread",
+    "value" : "3006@fv-az199-487.ForkJoinPool-1-worker-3(16)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TrainersPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "TrainersPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "SearchForTrainersTest"
+  }, {
+    "name" : "suite",
+    "value" : "TrainersPageTest"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "acddea4bce6af75.json",
+  "parameterValues" : [ ]
+}

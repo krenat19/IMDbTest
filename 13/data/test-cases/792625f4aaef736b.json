@@ -1,0 +1,88 @@
+{
+  "uid" : "792625f4aaef736b",
+  "name" : "DATA-02: Meglévő adat módosítása",
+  "fullName" : "ProfilePageTest.ModifyIntroductionTest",
+  "historyId" : "40f3f024d4817ff42a319d08f83d734f",
+  "time" : {
+    "start" : 1629708720670,
+    "stop" : 1629708727210,
+    "duration" : 6540
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "Setup",
+    "time" : {
+      "start" : 1629708720670,
+      "stop" : 1629708720933,
+      "duration" : 263
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "Close",
+    "time" : {
+      "start" : 1629708727133,
+      "stop" : 1629708727210,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az199-487"
+  }, {
+    "name" : "thread",
+    "value" : "3006@fv-az199-487.ForkJoinPool-1-worker-3(16)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "ProfilePageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "ProfilePageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ModifyIntroductionTest"
+  }, {
+    "name" : "suite",
+    "value" : "ProfilePageTest"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "792625f4aaef736b.json",
+  "parameterValues" : [ ]
+}
