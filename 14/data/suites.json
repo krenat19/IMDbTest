@@ -1,0 +1,367 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "CalendarPageTest",
+    "children" : [ {
+      "name" : "LOGOUT-03: Kijelentkezés másik fülön való kijelentkezés után",
+      "uid" : "76da05ee2584105",
+      "parentUid" : "34ba19aefd0af40fdc8bee947337979d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708832891,
+        "stop" : 1629708846751,
+        "duration" : 13860
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGOUT-02: Kijelentkezés második felhasználó bejelentkezése esetén",
+      "uid" : "b37b605b47be933d",
+      "parentUid" : "34ba19aefd0af40fdc8bee947337979d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708846879,
+        "stop" : 1629708854318,
+        "duration" : 7439
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGOUT-01: Kijelentkezés kattintással",
+      "uid" : "92b47f497145b25b",
+      "parentUid" : "34ba19aefd0af40fdc8bee947337979d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708854324,
+        "stop" : 1629708858527,
+        "duration" : 4203
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "34ba19aefd0af40fdc8bee947337979d"
+  }, {
+    "name" : "LoginPageTest",
+    "children" : [ {
+      "name" : "LOGIN-04: Bejelentkezés regisztrált, de nem megerősített email-címmel",
+      "uid" : "265ba9fa5f539299",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708832945,
+        "stop" : 1629708841693,
+        "duration" : 8748
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-02: Bejelentkezés üres mezőkkel",
+      "uid" : "f8cd6cb15b6a4a16",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708841953,
+        "stop" : 1629708845351,
+        "duration" : 3398
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-06: Bejelentkezés jelszó megadása nélkül",
+      "uid" : "682c879fea8f72dc",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708845357,
+        "stop" : 1629708848516,
+        "duration" : 3159
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-05: Bejelentkezés felhasználónév megadása nélkül",
+      "uid" : "88e2a03cfc827652",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708848519,
+        "stop" : 1629708852327,
+        "duration" : 3808
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-03: Bejelentkezés nem regisztrált email-címmel",
+      "uid" : "3428830db9823b56",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708852330,
+        "stop" : 1629708857975,
+        "duration" : 5645
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-01: Normál bejelentkezés",
+      "uid" : "ae72cca53faea078",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708857982,
+        "stop" : 1629708861748,
+        "duration" : 3766
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LOGIN-07: Bejelentkezés helytelen jelszóval",
+      "uid" : "4506b412c809292a",
+      "parentUid" : "4c02d1c299d33785fe93a09989ce5979",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708861753,
+        "stop" : 1629708865266,
+        "duration" : 3513
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4c02d1c299d33785fe93a09989ce5979"
+  }, {
+    "name" : "TrainersPageTest",
+    "children" : [ {
+      "name" : "SEARCH-02: Edzők neveinek mentése txt fájlba",
+      "uid" : "fe3416fadae26220",
+      "parentUid" : "65458c297cc47f5062279b99cf144ea1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708865280,
+        "stop" : 1629708868400,
+        "duration" : 3120
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SEARCH-01: Adatok listázása kereséssel",
+      "uid" : "b2f06323689d5968",
+      "parentUid" : "65458c297cc47f5062279b99cf144ea1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708868403,
+        "stop" : 1629708871861,
+        "duration" : 3458
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "65458c297cc47f5062279b99cf144ea1"
+  }, {
+    "name" : "RegisterPageTest",
+    "children" : [ {
+      "name" : "REG-08: Regisztráció már létező felhasználóval",
+      "uid" : "e74446a6cf7dd3cb",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708871871,
+        "stop" : 1629708875510,
+        "duration" : 3639
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-01: Normál regisztráció",
+      "uid" : "f34881ff384f7550",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708875513,
+        "stop" : 1629708898322,
+        "duration" : 22809
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-04: Regisztráció nem egyező jelszavakkal",
+      "uid" : "4dd7650342a5ee65",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708898325,
+        "stop" : 1629708902962,
+        "duration" : 4637
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-03: Regisztráció érvénytelen jelszóval",
+      "uid" : "a42bcc0b6edb7fb5",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708902965,
+        "stop" : 1629708907846,
+        "duration" : 4881
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-02: Regisztráció invalid email-címmel",
+      "uid" : "2ad8ff155e8d4f6",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708907849,
+        "stop" : 1629708911062,
+        "duration" : 3213
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-07: Regisztráció ÁSZF elfogadása nélkül",
+      "uid" : "a92e61fd89cd7594",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708911066,
+        "stop" : 1629708915532,
+        "duration" : 4466
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-05: Regisztráció ÁSZF és adatvédelmi feltételek elfogadása nélkül",
+      "uid" : "18da94a04e6f83ec",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708915534,
+        "stop" : 1629708920425,
+        "duration" : 4891
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "REG-06: Regisztráció adatvédelmi feltételek elfogadása nélkül",
+      "uid" : "dd4f1a3ff5baa121",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708920428,
+        "stop" : 1629708926692,
+        "duration" : 6264
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "T&C-03: Cookie-k elfogadása",
+      "uid" : "858b2900b19488aa",
+      "parentUid" : "9c5d36fac321f063fa5dd21790425058",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708926695,
+        "stop" : 1629708949576,
+        "duration" : 22881
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9c5d36fac321f063fa5dd21790425058"
+  }, {
+    "name" : "ReportsPageTest",
+    "children" : [ {
+      "name" : "LIST-01: Többoldalas lista bejárása",
+      "uid" : "3bb392cb23a006c0",
+      "parentUid" : "d52f6577db0016009acbeb8492cdb9df",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708949584,
+        "stop" : 1629708977133,
+        "duration" : 27549
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d52f6577db0016009acbeb8492cdb9df"
+  }, {
+    "name" : "ProfilePageTest",
+    "children" : [ {
+      "name" : "DATA-02: Meglévő adat módosítása",
+      "uid" : "fde5e8f4b128decd",
+      "parentUid" : "99a2713c6f05019667920136348ec903",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708977142,
+        "stop" : 1629708983733,
+        "duration" : 6591
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "DATA-04: Adatok sorozatos feltöltése külső fájlból",
+      "uid" : "faae25d90dfb6148",
+      "parentUid" : "99a2713c6f05019667920136348ec903",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629708983735,
+        "stop" : 1629708988382,
+        "duration" : 4647
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "DATA-03: Meglévő adat törlése",
+      "uid" : "9ed620fd7c0a42da",
+      "parentUid" : "99a2713c6f05019667920136348ec903",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708988392,
+        "stop" : 1629708993532,
+        "duration" : 5140
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "DATA-01: Új adat bevitele a bemutatkozás mezőbe",
+      "uid" : "905a0ebf72897320",
+      "parentUid" : "99a2713c6f05019667920136348ec903",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629708993534,
+        "stop" : 1629708999013,
+        "duration" : 5479
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "99a2713c6f05019667920136348ec903"
+  } ],
+  "name" : "suites"
+}
