@@ -9,8 +9,6 @@ import java.io.FileReader;
 
 public class TrainersPageTest extends BaseTest {
 
-    LoginPage loginPage;
-    CalendarPage calendarPage;
     TrainersPage trainersPage;
 
     @Test

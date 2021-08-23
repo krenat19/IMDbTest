@@ -15,7 +15,8 @@ public class CalendarPageTest extends BaseTest {
     @DisplayName("LOGOUT-01: Kijelentkezés kattintással")
     public void LogoutTest() {
         calendarPage = new CalendarPage(driver);
-        String iconText = calendarPage.Logout();
+        calendarPage.Logout();
+        String iconText = calendarPage.GetLogoutText();
         Assertions.assertEquals("BELÉPÉS", iconText);
     }
 
@@ -24,7 +25,8 @@ public class CalendarPageTest extends BaseTest {
     @DisplayName("LOGOUT-02: Kijelentkezés második felhasználó bejelentkezése esetén")
     public void LogoutWithDuplicateLoginTest() {
         calendarPage = new CalendarPage(driver);
-        String welcomeMessage = calendarPage.LogoutWithDuplicateLogin();
+        calendarPage.LogoutWithDuplicateLogin();
+        String welcomeMessage = calendarPage.GetWelcomeMessage();
         Assertions.assertEquals("Hello, " + TestData.SECOND_USER_EMAIL, welcomeMessage);
     }
 
@@ -33,7 +35,8 @@ public class CalendarPageTest extends BaseTest {
     @DisplayName("LOGOUT-03: Kijelentkezés másik fülön való kijelentkezés után")
     public void LogoutWhenLoggingOutOnDifferentTabTest() {
         calendarPage = new CalendarPage(driver);
-        String iconText = calendarPage.LogoutWhenLoggingOutOnDifferentTab();
+        calendarPage.LogoutWhenLoggingOutOnDifferentTab();
+        String iconText = calendarPage.GetLogoutText();
         Assertions.assertEquals("BELÉPÉS", iconText);
     }
 }

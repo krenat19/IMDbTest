@@ -6,7 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Util {
@@ -25,18 +29,35 @@ public class Util {
         this.driver = driver;
     }
 
+    //this method generates a new disposable email address
     public String GenerateNewEmail() {
         driver.get(TestData.TEMP_MAIL_URL);
         driver.findElement(TEMPMAIL_COOKIE_POLICY_BUTTON).click();
         driver.findElement(TEMPMAIL_RANDOM_BUTTON).click();
         String email = driver.findElement(TEMP_EMAIL_ADDRESS).getAttribute("value");
         return email;
-            }
+    }
 
+    //confirming the registration
     public void ConfirmEmail() {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(EMAIL_TITLE))).click();
         driver.findElement(EMAIL_LINK).click();
+    }
+
+    public List<String> ReadFromFile(String filename)  {
+        List<String> text = new ArrayList<>();
+        try {
+            File file = new File(filename);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                text.add(scanner.nextLine());
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return text;
     }
 
 }

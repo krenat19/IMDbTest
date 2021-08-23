@@ -2,6 +2,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -21,8 +22,8 @@ public class ProfilePageTest extends BaseTest{
         loginPage = new LoginPage(driver);
         loginPage = new LoginPage(driver);
         calendarPage = loginPage.Login(TestData.TRAINER_EMAIL, TestData.TRAINER_PASSWORD);
-        profilePage.AcceptCookies();
         profilePage = calendarPage.NavigateToProfilePage();
+        profilePage.AcceptCookies();
         String msg = profilePage.AddIntroduction(TestData.NEW_INTRODUCTION);
         Assertions.assertEquals(TestData.NEW_INTRODUCTION.toUpperCase(), msg);
     }
@@ -51,6 +52,20 @@ public class ProfilePageTest extends BaseTest{
         profilePage.AcceptCookies();
         String msg = profilePage.DeleteIntroduction();
         Assertions.assertEquals("", msg);
+
+    }
+
+    @Test
+    @Severity(SeverityLevel.MINOR)
+    @DisplayName("DATA-04: Adatok sorozatos feltöltése külső fájlból")
+    public void AddCompanyDataTest() {
+        driver.get(TestData.LOGIN_URL);
+        loginPage = new LoginPage(driver);
+        calendarPage = loginPage.Login(TestData.TRAINER_EMAIL, TestData.TRAINER_PASSWORD);
+        profilePage = calendarPage.NavigateToProfilePage();
+        profilePage.AcceptCookies();
+        String msg = profilePage.AddCompanyData();
+        Assertions.assertEquals(TestData.SUCCESSFUL_COMPANY_DATA_UPLOAD, msg);
 
     }
 }

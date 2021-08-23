@@ -25,10 +25,10 @@ public class LoginPage {
         return notificationMessage;
     }
 
-    public void NavigateToLoginPage() {
-        driver.get(TestData.LOGIN_URL);
-    }
 
+    public boolean IsLoginButtonActive() {
+        return driver.findElement(LOGIN_BUTTON).isEnabled();
+    }
 
     public CalendarPage Login(String username, String password) {
         driver.findElement(EMAIL_FIELD).sendKeys(username);
@@ -37,47 +37,22 @@ public class LoginPage {
         return new CalendarPage(driver);
     }
 
-    public boolean EmptyLogin() {
-        NavigateToLoginPage();
-        boolean isLoginButtonActive = driver.findElement(LOGIN_BUTTON).isEnabled();
-        return isLoginButtonActive;
-    }
 
-    public String LoginWithUnregisteredEmail() {
+
+    public void LoginWithUnregisteredEmail() {
         util = new Util(driver);
         String reg_email = util.GenerateNewEmail();
-        NavigateToLoginPage();
+        driver.get(TestData.LOGIN_URL);
         Login(reg_email, TestData.TRAINER_PASSWORD);
-        return GetNotificationMessage();
     }
 
-    public String LoginWithUnconfirmedEmail() {
+    public void LoginWithUnconfirmedEmail() {
         registerPage = new RegisterPage(driver);
         String reg_email = registerPage.RegisterWithoutConfirming();
-        NavigateToLoginPage();
+        driver.get(TestData.LOGIN_URL);
         Login(reg_email, TestData.REG_PASSWORD);
-        return GetNotificationMessage();
     }
 
-    public boolean LoginWithoutUsername() {
-        NavigateToLoginPage();
-        Login("", TestData.TRAINER_PASSWORD);
-        boolean isLoginButtonActive = driver.findElement(LOGIN_BUTTON).isEnabled();
-        return isLoginButtonActive;
-    }
-
-    public boolean LoginWithoutPassword() {
-        NavigateToLoginPage();
-        Login(TestData.TRAINER_EMAIL, "");
-        boolean isLoginButtonActive = driver.findElement(LOGIN_BUTTON).isEnabled();
-        return isLoginButtonActive;
-    }
-
-    public String LoginWithIncorrectPassword() {
-        NavigateToLoginPage();
-        Login(TestData.TRAINER_EMAIL, TestData.MISMATCHED_PASSWORD);
-        return GetNotificationMessage();
-    }
 
 
 }

@@ -12,7 +12,7 @@ public class RegisterPageTest extends BaseTest {
     RegisterPage registerPage;
 
 
-    @Test
+   /* @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("T&C-01: Általános felhasználási feltételek meglétének ellenőrzése")
     public void CheckingTermsAndConditionsTest() {
@@ -30,7 +30,7 @@ public class RegisterPageTest extends BaseTest {
         driver.get(TestData.REGISTRATION_URL);
         boolean result = registerPage.CheckingPrivacyPolicy();
         Assertions.assertTrue(result);
-    }
+    } */
 
     @Test
     @Severity(SeverityLevel.NORMAL)
@@ -57,6 +57,7 @@ public class RegisterPageTest extends BaseTest {
     @DisplayName("REG-02: Regisztráció invalid email-címmel")
     public void RegisterWithInvalidEmailTest() {
         registerPage = new RegisterPage(driver);
+        driver.get(TestData.REGISTRATION_URL);
         boolean isRegistrationButtonActive = registerPage.RegisterWithInvalidEmail();
         Assertions.assertFalse(isRegistrationButtonActive);
     }

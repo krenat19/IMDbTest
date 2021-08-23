@@ -86,7 +86,6 @@ public class RegisterPage {
     }
 
     public boolean RegisterWithInvalidEmail() {
-        driver.get(TestData.REGISTRATION_URL);
         driver.findElement(EMAIL).sendKeys(TestData.INVALID_EMAIL);
         driver.findElement(PASSWORD).sendKeys(TestData.REG_PASSWORD);
         driver.findElement(CONFIRM_PASSWORD).sendKeys(TestData.REG_PASSWORD);
