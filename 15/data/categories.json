@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected: <Hello, cucsiw@mailpoof.com> but was: <Hello, Rocky>",
+      "children" : [ {
+        "name" : "LOGOUT-02: Kijelentkezés második felhasználó bejelentkezése esetén",
+        "uid" : "783e80ac938f5d15",
+        "parentUid" : "f0e158c8703a29965ea1b0ade5344427",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629737287241,
+          "stop" : 1629737293900,
+          "duration" : 6659
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f0e158c8703a29965ea1b0ade5344427"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
