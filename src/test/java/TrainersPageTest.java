@@ -20,7 +20,7 @@ public class TrainersPageTest extends BaseTest {
         driver.get(TestData.TRAINERS_PAGE_URL);
         trainersPage = new TrainersPage(driver);
         trainersPage.AcceptCookies();
-        String searchTerm = "Verő";
+        String searchTerm = "Adri";
         List<WebElement> resultlist = trainersPage.SearchForTrainers(searchTerm);
         boolean matchingResult = trainersPage.CheckResults(resultlist, searchTerm);
         Assertions.assertTrue(matchingResult);
