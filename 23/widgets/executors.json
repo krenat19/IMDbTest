@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://krenat19.github.io/igym_test",
+  "buildOrder" : 23,
+  "buildName" : "GitHub Actions Run #1162548130",
+  "buildUrl" : "https://github.com/krenat19/igym_test/actions/runs/1162548130",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://krenat19.github.io/igym_test/23/"
+} ]
