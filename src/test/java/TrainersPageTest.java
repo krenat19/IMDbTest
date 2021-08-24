@@ -3,9 +3,11 @@ import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebElement;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.List;
 
 public class TrainersPageTest extends BaseTest {
 
@@ -18,7 +20,9 @@ public class TrainersPageTest extends BaseTest {
         driver.get(TestData.TRAINERS_PAGE_URL);
         trainersPage = new TrainersPage(driver);
         trainersPage.AcceptCookies();
-        boolean matchingResult = trainersPage.SearchForTrainers("Verő");
+        String searchTerm = "Verő";
+        List<WebElement> resultlist = trainersPage.SearchForTrainers(searchTerm);
+        boolean matchingResult = trainersPage.CheckResults(resultlist, searchTerm);
         Assertions.assertTrue(matchingResult);
     }
 
@@ -29,6 +33,7 @@ public class TrainersPageTest extends BaseTest {
         driver.get(TestData.TRAINERS_PAGE_URL);
         trainersPage = new TrainersPage(driver);
         int foundTrainers = trainersPage.SaveTrainersToFile();
+        //reads txt file and checks the number of lines
         int lines = 0;
         try {
             BufferedReader reader = new BufferedReader(new FileReader("trainers.txt"));
