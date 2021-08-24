@@ -47,7 +47,6 @@ public class TrainersPage {
             list.get(index).click();
             WebDriverWait wait = new WebDriverWait(driver, 10);
             String name = wait.until(ExpectedConditions.visibilityOf(driver.findElement(NAME_ON_CARD))).getText();
-            System.out.println(name);
             if (name.contains(searchTerm.toUpperCase())) {
                 correctResult += 1;
                 index += 1;
@@ -60,8 +59,6 @@ public class TrainersPage {
         if (correctResult == list.size()) {
             result = true;
         }
-        System.out.println(correctResult);
-        System.out.println(list.size());
         return result;
     }
 
