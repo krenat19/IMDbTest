@@ -1,0 +1,281 @@
+[ {
+  "uid" : "aaf2893f7abc0d71",
+  "name" : "LOGIN-05: Bejelentkezés felhasználónév megadása nélkül",
+  "time" : {
+    "start" : 1629804805069,
+    "stop" : 1629804807268,
+    "duration" : 2199
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b51eceb8f24383b6",
+  "name" : "REG-01: Normál regisztráció",
+  "time" : {
+    "start" : 1629804841852,
+    "stop" : 1629804870908,
+    "duration" : 29056
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "ff395e04791a061e",
+  "name" : "LOGIN-06: Bejelentkezés jelszó megadása nélkül",
+  "time" : {
+    "start" : 1629804802938,
+    "stop" : 1629804805066,
+    "duration" : 2128
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4a65b82e190c881c",
+  "name" : "LOGOUT-03: Kijelentkezés másik fülön való kijelentkezés után",
+  "time" : {
+    "start" : 1629804815398,
+    "stop" : 1629804823434,
+    "duration" : 8036
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c4e117b3a560aef",
+  "name" : "T&C-03: Cookie-k elfogadása",
+  "time" : {
+    "start" : 1629804893356,
+    "stop" : 1629804916345,
+    "duration" : 22989
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5947152452900ad0",
+  "name" : "LOGOUT-01: Kijelentkezés kattintással",
+  "time" : {
+    "start" : 1629804829867,
+    "stop" : 1629804832797,
+    "duration" : 2930
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "67d700b6982b0216",
+  "name" : "LOGIN-02: Bejelentkezés üres mezőkkel",
+  "time" : {
+    "start" : 1629804801037,
+    "stop" : 1629804802934,
+    "duration" : 1897
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a2c24fe872d67f3",
+  "name" : "T&C-02: Adatvédelmi feltételek meglétének ellenőrzése",
+  "time" : {
+    "start" : 1629804877004,
+    "stop" : 1629804877004,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "514530d923440368",
+  "name" : "LOGIN-07: Bejelentkezés helytelen jelszóval",
+  "time" : {
+    "start" : 1629804812905,
+    "stop" : 1629804815373,
+    "duration" : 2468
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "552ac18b1e065cc",
+  "name" : "REG-07: Regisztráció ÁSZF elfogadása nélkül",
+  "time" : {
+    "start" : 1629804879676,
+    "stop" : 1629804884464,
+    "duration" : 4788
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48b58ce1b337cff4",
+  "name" : "REG-08: Regisztráció már létező felhasználóval",
+  "time" : {
+    "start" : 1629804839229,
+    "stop" : 1629804841846,
+    "duration" : 2617
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e524c0ecedcaf76",
+  "name" : "DATA-04: Adatok sorozatos feltöltése külső fájlból",
+  "time" : {
+    "start" : 1629804945467,
+    "stop" : 1629804950121,
+    "duration" : 4654
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "adccb13efae62544",
+  "name" : "DATA-03: Meglévő adat törlése",
+  "time" : {
+    "start" : 1629804950123,
+    "stop" : 1629804953988,
+    "duration" : 3865
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9ce6b72a9d30001",
+  "name" : "T&C-01: Általános felhasználási feltételek meglétének ellenőrzése",
+  "time" : {
+    "start" : 1629804841850,
+    "stop" : 1629804841850,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "f3f1c2a46322f085",
+  "name" : "DATA-02: Meglévő adat módosítása",
+  "time" : {
+    "start" : 1629804941282,
+    "stop" : 1629804945465,
+    "duration" : 4183
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "113464251f49841f",
+  "name" : "SEARCH-01: Adatok listázása kereséssel",
+  "time" : {
+    "start" : 1629804834928,
+    "stop" : 1629804839209,
+    "duration" : 4281
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "475ee269874bde4a",
+  "name" : "LOGIN-03: Bejelentkezés nem regisztrált email-címmel",
+  "time" : {
+    "start" : 1629804807271,
+    "stop" : 1629804810352,
+    "duration" : 3081
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b683a0e3e0183f4c",
+  "name" : "DATA-01: Új adat bevitele a bemutatkozás mezőbe",
+  "time" : {
+    "start" : 1629804953990,
+    "stop" : 1629804958168,
+    "duration" : 4178
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "efbfb5d7dd6ef50f",
+  "name" : "LOGOUT-02: Kijelentkezés második felhasználó bejelentkezése esetén",
+  "time" : {
+    "start" : 1629804823437,
+    "stop" : 1629804829864,
+    "duration" : 6427
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77a5e1d88c698cde",
+  "name" : "REG-03: Regisztráció érvénytelen jelszóval",
+  "time" : {
+    "start" : 1629804873972,
+    "stop" : 1629804877002,
+    "duration" : 3030
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "22ca9f7411bd7e04",
+  "name" : "REG-02: Regisztráció invalid email-címmel",
+  "time" : {
+    "start" : 1629804877006,
+    "stop" : 1629804879674,
+    "duration" : 2668
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fcaef6ad257caab",
+  "name" : "LIST-01: Többoldalas lista bejárása",
+  "time" : {
+    "start" : 1629804916354,
+    "stop" : 1629804941273,
+    "duration" : 24919
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d87dffee160286",
+  "name" : "REG-06: Regisztráció adatvédelmi feltételek elfogadása nélkül",
+  "time" : {
+    "start" : 1629804888953,
+    "stop" : 1629804893354,
+    "duration" : 4401
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d9f81aa331362cc",
+  "name" : "LOGIN-04: Bejelentkezés regisztrált, de nem megerősített email-címmel",
+  "time" : {
+    "start" : 1629804796009,
+    "stop" : 1629804800922,
+    "duration" : 4913
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "896d7a8e609dc503",
+  "name" : "REG-05: Regisztráció ÁSZF és adatvédelmi feltételek elfogadása nélkül",
+  "time" : {
+    "start" : 1629804884466,
+    "stop" : 1629804888951,
+    "duration" : 4485
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ffc0204c6dfe655",
+  "name" : "SEARCH-02: Edzők neveinek mentése txt fájlba",
+  "time" : {
+    "start" : 1629804832801,
+    "stop" : 1629804834926,
+    "duration" : 2125
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "c0e440c8898bb87c",
+  "name" : "REG-04: Regisztráció nem egyező jelszavakkal",
+  "time" : {
+    "start" : 1629804870918,
+    "stop" : 1629804873968,
+    "duration" : 3050
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dee115b5c8a58de4",
+  "name" : "LOGIN-01: Normál bejelentkezés",
+  "time" : {
+    "start" : 1629804810355,
+    "stop" : 1629804812898,
+    "duration" : 2543
+  },
+  "status" : "passed",
+  "severity" : "critical"
+} ]
