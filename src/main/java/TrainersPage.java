@@ -56,6 +56,8 @@ public class TrainersPage {
         if (correctResult == list.size()) {
             result = true;
         }
+        System.out.println(correctResult);
+        System.out.println(list.size());
         return result;
     }
 
