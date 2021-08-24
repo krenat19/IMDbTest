@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected: <Hello, cucsiw@mailpoof.com> but was: <Hello, Rocky>",
+      "children" : [ {
+        "name" : "LOGOUT-02: Kijelentkezés második felhasználó bejelentkezése esetén",
+        "uid" : "a99ad01339684367",
+        "parentUid" : "f0e158c8703a29965ea1b0ade5344427",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629805926145,
+          "stop" : 1629805932546,
+          "duration" : 6401
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f0e158c8703a29965ea1b0ade5344427"
+    }, {
+      "name" : "expected: <true> but was: <false>",
+      "children" : [ {
+        "name" : "SEARCH-01: Adatok listázása kereséssel",
+        "uid" : "a144a797814baece",
+        "parentUid" : "845845d2ca1b5f839f479796c2627505",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629805937323,
+          "stop" : 1629805941376,
+          "duration" : 4053
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "845845d2ca1b5f839f479796c2627505"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
