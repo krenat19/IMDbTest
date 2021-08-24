@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -43,7 +45,9 @@ public class TrainersPage {
         int correctResult = 0;
         for (WebElement i : list) {
             list.get(index).click();
-            String name = driver.findElement(NAME_ON_CARD).getText();
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            String name = wait.until(ExpectedConditions.visibilityOf(driver.findElement(NAME_ON_CARD))).getText();
+            System.out.println(name);
             if (name.contains(searchTerm.toUpperCase())) {
                 correctResult += 1;
                 index += 1;
